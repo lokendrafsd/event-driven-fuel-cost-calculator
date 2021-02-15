@@ -53,3 +53,26 @@ auto.create.topics.enable=false
 ```
 ./kafka-server-start.sh ../config/server.properties
 ```
+</details>
+<details><summary>Windows</summary>
+<p>
+
+- Make sure you are inside the **bin/windows** directory.
+
+## Start Zookeeper and Kafka Broker
+
+-   Start up the Zookeeper.
+
+```
+zookeeper-server-start.bat ..\..\config\zookeeper.properties
+```
+
+-   Start up the Kafka Broker.
+
+```
+kafka-server-start.bat ..\..\config\server.properties
+```
+
+</p>
+
+</details>
