@@ -1,1 +1,27 @@
 # Event-Driven-Fuel-Cost-Calculator
+
+## Technologies Used
+
+ 1. Programming Language: Java8
+ 2. Backend Framework: SpringBoot2
+ 3. Database: NA
+ 4. Caching: Spring Cache, Ehcache
+ 5. Messaging: Kafka
+ 6. Miscellaneous: Spring Schedulers
+
+## Modules Available
+ **1. **Event-Receiving-API****
+ 
+|URL| http://localhost:8082/producer/eventTrigger/action/trigger-event |
+|--|--|
+|Reqyest body | {  "eventFlag”: true, "cityName": "Bangalore" }  |
+
+ **2. **Event-Producer-API****
+ 
+|URL| http://localhost:8081/consumer/eventTrigger/action/trigger-event |
+|--|--|
+|Reqyest body | {"eventFlag": false, "timeStamp": "2021-02-15T12:44:00.014", "cityName": "Mumbai"}  |
+
+ **3. Fuel-Price-API**
+|URL| http://localhost:8083/fuelPrice/v1/{cityName} |
+|--|--|
